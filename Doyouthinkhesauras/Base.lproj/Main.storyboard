@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Doyouthinkhesauras" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-ag-2oP">
+                                <rect key="frame" x="110" y="535" width="381" height="31"/>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grant1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="G2M-fI-D5q">
+                                <rect key="frame" x="494" y="294" width="77" height="200"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="trex.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Elf-Od-87S">
+                                <rect key="frame" x="-201" y="170" width="764" height="331"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Vh-ag-2oP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="66F-xR-1Kc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Elf-Od-87S" secondAttribute="trailing" constant="21" id="GwK-iF-7rs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Vh-ag-2oP" secondAttribute="bottom" constant="35" id="KMy-j4-mBB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G2M-fI-D5q" secondAttribute="trailing" constant="13" id="QOm-FY-x4g"/>
+                            <constraint firstItem="Elf-Od-87S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-217" id="hJz-S2-TC0"/>
+                            <constraint firstItem="2Vh-ag-2oP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pSY-Ld-nuQ"/>
+                            <constraint firstItem="Elf-Od-87S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="rXl-VF-JHN"/>
+                            <constraint firstAttribute="centerY" secondItem="G2M-fI-D5q" secondAttribute="centerY" constant="-94" id="xuN-HY-xrC"/>
+                            <constraint firstItem="2Vh-ag-2oP" firstAttribute="top" secondItem="Elf-Od-87S" secondAttribute="bottom" constant="34" id="zgg-h5-Dfm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="positionSlider" destination="2Vh-ag-2oP" id="2SQ-QD-FSD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79" y="314"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="grant1.jpg" width="77" height="200"/>
+        <image name="trex.jpg" width="555" height="534"/>
+    </resources>
+</document>
