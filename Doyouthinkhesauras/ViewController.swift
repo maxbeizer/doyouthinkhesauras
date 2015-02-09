@@ -28,11 +28,15 @@ class ViewController: UIViewController {
 
     @IBAction func silderValueChange(sender: UISlider) {
         moveImages()
-        if self.positionSlider.value == self.positionSlider.maximumValue {
-            self.rawr.alpha = 1.0
-        }
-        else {
-            self.rawr.alpha = 0.0
+        toggleRawr()
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
+        if motion == .MotionShake {
+            self.positionSlider.value = 0.5
+            moveImages()
+            toggleRawr()
+            
         }
     }
     
@@ -48,6 +52,15 @@ class ViewController: UIViewController {
             }, completion: {finished in
                 // do something?
         })
+    }
+    
+    func toggleRawr() {
+        if self.positionSlider.value == self.positionSlider.maximumValue {
+            self.rawr.alpha = 1.0
+        }
+        else {
+            self.rawr.alpha = 0.0
+        }
     }
 }
 
