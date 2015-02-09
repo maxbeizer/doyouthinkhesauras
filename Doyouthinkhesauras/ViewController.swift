@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var positionSlider: UISlider!
     @IBOutlet weak var grant: UIImageView!
     @IBOutlet weak var trex: UIImageView!
+    @IBOutlet weak var rawr: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,16 @@ class ViewController: UIViewController {
 
 
     @IBAction func silderValueChange(sender: UISlider) {
+        moveImages()
+        if self.positionSlider.value == self.positionSlider.maximumValue {
+            self.rawr.alpha = 1.0
+        }
+        else {
+            self.rawr.alpha = 0.0
+        }
+    }
+    
+    func moveImages() {
         let duration = 2.0
         let delay = 0.0
         let options = UIViewKeyframeAnimationOptions.CalculationModeLinear
@@ -34,8 +45,8 @@ class ViewController: UIViewController {
                 self.grant.transform = CGAffineTransformMakeTranslation(CGFloat(self.positionSlider.value * 100), CGFloat(0))
                 self.trex.transform = CGAffineTransformMakeTranslation(CGFloat(self.positionSlider.value * 275), CGFloat(0))
             })
-        }, completion: {finished in
-            // do something?
+            }, completion: {finished in
+                // do something?
         })
     }
 }
